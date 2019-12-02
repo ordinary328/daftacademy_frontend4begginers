@@ -199,6 +199,8 @@ Sekcja pomocnicza, aby zwizualizować pozycje głównych bloków strony. Będzie
     letter-spacing: 1.5px;
 }
 
+.band-
+
 
 /* about */
 .content-section_about-section img{
@@ -247,6 +249,7 @@ Sekcja pomocnicza, aby zwizualizować pozycje głównych bloków strony. Będzie
     grid-gap: 5%;
     width: 80%;
     float: right;
+    margin-bottom: 5%;
     
 }
 
@@ -296,7 +299,7 @@ iframe{
     width: 85%;
 }
 #video{
-    margin-top: 15%;
+    margin-bottom: 5%;
     height: 80%;
 }
 
@@ -457,3 +460,127 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
 .content-section {
     min-height: 100vh;
 }
+
+
+/* !!!!!!!!!!!!!!! RESPONSIVE DESIGN !!!!!!!!!!!!!!!!! */
+
+
+@media screen and (min-width:360px) and (max-width: 640px) {
+/* !!! OGÓŁ !!! */
+    .page-content{
+        margin-left: 0;
+    }
+    /* !!! MENU !!! */
+    .page-header{
+        position: unset;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+        
+    /* !!!!!! GŁOWY !!!!! */
+    #home.content-section, .band-members{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+        .content-section{
+        height: auto;
+        align-items: center;
+    }
+
+     .band-members__item{
+         margin-bottom: 5%;
+    }
+
+    /* !!! ABOUT !!! */
+     .content-section_about-section img{
+         width: 100%;
+    }
+
+     .about-section__desc{
+        position: unset;
+         width: auto;
+        margin-bottom: 5%;
+    }
+
+    /* !!! CONCERT !!! */
+    .concerts{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .concerts__item{
+        width: 100%;
+    }
+
+    .button{
+        height: 70%;
+    }
+
+    /* VIDEO */
+    iframe{
+        height: 250px;
+        width: 100%;
+    }
+
+    /* !!! GALERY !!! */
+
+    @supports (display: grid) {
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            width: 100%;
+            grid-gap: 8px;
+        }
+    }
+
+    @supports not (display: grid) {
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+
+    /* !!! FOOTER !!! */
+    .page-footer {
+        position: unset;
+    }
+
+    /* !!! Contact !!! */
+    .contact{
+        width: 100%;
+    }
+
+    #contact{
+        margin-top: 0%;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .contact-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-info img{
+        justify-content: center;
+    }
+
+    address{
+        margin-top: 10%;
+        font-style: normal;
+        justify-content: start;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* !!! FOOTER !!! */
+    .page-footer{
+        display: none;
+    }
+
+} 
+
