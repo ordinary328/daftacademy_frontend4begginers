@@ -429,7 +429,19 @@ address{
     padding: 5px;
 }
 
-
+.texty{
+    display: none;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(219, 216, 251, 0.8);
+    font-family: "Open Sans";
+    margin-left: 30%;
+    margin-top: 15%;
+}
 
 
 
@@ -461,6 +473,10 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     min-height: 100vh;
 }
 
+.hamburger{
+    display: none;
+}
+
 
 /* !!!!!!!!!!!!!!! RESPONSIVE DESIGN !!!!!!!!!!!!!!!!! */
 
@@ -470,13 +486,25 @@ która wymusza wysokość elementu na zadaną wartość lub wyższą.
     .page-content{
         margin-left: 0;
     }
+
+    .hamburger{
+        display: flex;
+    }
+
     /* !!! MENU !!! */
     .page-header{
         position: unset;
-        text-align: center;
+        text-align: right;
         margin-bottom: 5%;
     }
-        
+    h1{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .page-navigation{
+        display: none;
+    }
     /* !!!!!! GŁOWY !!!!! */
     #home.content-section, .band-members{
         flex-direction: column;
