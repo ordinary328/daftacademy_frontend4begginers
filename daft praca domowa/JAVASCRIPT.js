@@ -1,18 +1,5 @@
 
 const hamburger = document.querySelector(".hamburger");
-// hamburger.addEventListener('click',function abc() {
-//     if (menu.style.visibility === "visible") {
-//         menu.style.visibility = "hidden";
-//       } else {
-//         menu.style.visibility = "visible";
-//         function change() {
-//           const menu = document.querySelector(".page-navigation");
-//           menu.classList.toggle.remove("");
-//         }
-//         change()
-//       }
-// })
-
 
 function changeToX(e) {
   e.classList.toggle("switch");
@@ -45,11 +32,7 @@ let abc = document.querySelectorAll('.texty')
       
         const obj = Object.fromEntries(formData);
         console.log(obj);
-      });
-
-   
-
-      
+      });    
       
       for (let i = 0; i < 9; i += 1) {
         const query = document.getElementsByClassName("gallery__image");
